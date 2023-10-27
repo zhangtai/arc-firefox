@@ -1,0 +1,58 @@
+:root {
+  --toolbarbutton-border-radius: 12px !important;
+  --chrome-content-separator-color: None !important;
+}
+
+#nav-bar {
+  margin-top: 8px;
+}
+
+/* hides the native tabs */
+#TabsToolbar {
+  display: none;
+}
+
+#titlebar {
+  display: none;
+}
+
+#sidebar-header {
+  display: None;
+}
+
+#appcontent .browserStack {
+  margin: 10px;
+}
+
+#appcontent browser {
+  border-radius: 15px;
+}
+
+.browser-toolbar:not(.titlebar-color) {
+  background: None !important;
+}
+
+#tabbrowser-tabbox,
+.browserSidebarContainer,
+#navigator-toolbox:-moz-lwtheme {
+  background: rgb(162, 192, 211) !important;
+}
+
+#nav-bar:not([tabs-hidden="true"]):-moz-lwtheme {
+  box-shadow: None !important;
+}
+
+.sidebar-splitter {
+  border: none !important;
+}
+
+
+/* #tabbrowser-tabbox, */
+#navigator-toolbox:-moz-lwtheme
+{
+  background-color: #9198e5 !important;
+}
+.browserSidebarContainer
+{
+  background: linear-gradient(#9198e5, #e66465) !important;
+}
