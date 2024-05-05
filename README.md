@@ -14,8 +14,8 @@
 ## Setup Sidebery
 
 1. Install Sidebery
-1. In Sidebery settings go to **Help** and click **Import addon data**
-1. Selete `sidebery.json` import and confirm
+1. In Sidebery settings: General > Preface Value, enable and set to default `[Sidebery] `
+1. Cope the content of `sidebery.css` into `Styles editor`
 
 ## Development
 

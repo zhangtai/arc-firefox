@@ -1,58 +1,43 @@
-:root {
-  --toolbarbutton-border-radius: 12px !important;
-  --chrome-content-separator-color: None !important;
+@media (prefers-color-scheme: light) {
+  .browserSidebarContainer {
+    background: linear-gradient(#f3ca52, #f6e9b2);
+  }
 }
 
-#nav-bar {
-  margin-top: 8px;
-}
-
-/* hides the native tabs */
-#TabsToolbar {
-  display: none;
-}
-
-#titlebar {
-  display: none;
+@media (prefers-color-scheme: dark) {
+  .browserSidebarContainer {
+    background: linear-gradient(#2c2907, #544e0d);
+  }
 }
 
 #sidebar-header {
   display: None;
 }
 
-#appcontent .browserStack {
-  margin: 10px;
-}
-
-#appcontent browser {
-  border-radius: 15px;
-}
-
-.browser-toolbar:not(.titlebar-color) {
-  background: None !important;
-}
-
-#tabbrowser-tabbox,
-.browserSidebarContainer,
-#navigator-toolbox:-moz-lwtheme {
-  background: rgb(162, 192, 211) !important;
-}
-
-#nav-bar:not([tabs-hidden="true"]):-moz-lwtheme {
-  box-shadow: None !important;
-}
-
 .sidebar-splitter {
   border: none !important;
 }
 
+#main-window #titlebar {
+  overflow: hidden;
+  transition: height 0.3s 0.3s !important;
+}
 
-/* #tabbrowser-tabbox, */
-#navigator-toolbox:-moz-lwtheme
-{
-  background-color: #9198e5 !important;
+#main-window[titlepreface*="[Sidebery] "] #titlebar,
+#main-window[titlepreface*="[Sidebery] "] #navigator-toolbox {
+  height: 0 !important;
 }
-.browserSidebarContainer
-{
-  background: linear-gradient(#9198e5, #b284b3) !important;
+
+#main-window[titlepreface*="[Sidebery] "] #tabbrowser-tabs {
+  z-index: 0 !important;
 }
+
+#main-window[titlepreface*="[Sidebery] "] #appcontent browser {
+  border-radius: 8px;
+  box-shadow: 0px 0px 8px 2px rgb(0 0 0 / 20%);
+}
+
+#main-window[titlepreface*="[Sidebery] "] #appcontent .browserStack {
+  margin: 8px;
+}
+

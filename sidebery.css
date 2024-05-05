@@ -1,0 +1,63 @@
+:dark body {
+  --s-act-el-border: None !important;
+}
+
+@media (prefers-color-scheme: light) {
+  #root.root {
+    background: linear-gradient(#f3ca52, #f6e9b2);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  #root.root {
+    background: linear-gradient(#2c2907, #544e0d);
+  }
+}
+
+#root.root {
+  --tabs-indent: 24px;
+}
+
+.PinnedTabsBar,
+.Tab[data-pin="true"][data-active="true"] .body,
+.TabsPanel .bottom-space {
+  background-color: transparent;
+}
+
+.Tab[data-pin="true"][data-active="true"] .body {
+  box-shadow: unset;
+}
+
+.Tab[data-pin="true"] .badge {
+  width: 12px;
+  height: 12px;
+}
+
+#root[data-theme="plain"][data-frame-color-scheme="dark"] {
+  --frame-el-bg: None;
+  --frame-el-fg: None;
+  --frame-el-shadow: None;
+  --active-el-shadow: None;
+}
+
+.PinnedTabsBar .Tab {
+  --tabs-pinned-audio-btn-width: 46px;
+  --tabs-pinned-audio-btn-height: 46px;
+  margin: 8px;
+}
+
+.Tab[data-pin="true"][data-active="true"] img {
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+}
+
+.PinnedTabsBar div.fav,
+.PinnedTabsBar img.fav-icon {
+  width: 46px;
+  height: 46px;
+  padding: 6px;
+}
+
+.Tab {
+  margin: 0.2rem var(--tabs-margin);
+}
