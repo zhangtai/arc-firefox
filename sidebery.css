@@ -1,24 +1,43 @@
+#root.root {
+  --general-border-radius: 10px;
+}
+#root.root {
+  --tabs-indent: 24px;
+}
 :dark body {
   --s-act-el-border: None !important;
 }
 
 @media (prefers-color-scheme: light) {
+  /*
   #root.root {
-    background: linear-gradient(#f3ca52, #f6e9b2);
+    background-color: rgb(249, 249, 251);
+  }
+*/
+  #root .NavigationBar {
+    background-color: #ececec;
   }
 }
 
 @media (prefers-color-scheme: dark) {
   #root.root {
-    background: linear-gradient(#2c2907, #544e0d);
+    background: linear-gradient(rgb(60, 40, 200), rgb(25, 0, 118));
   }
 }
 
-#root.root {
-  --tabs-indent: 24px;
+#root[data-theme="plain"][data-frame-color-scheme="dark"] {
+  --frame-el-bg: None;
+  --frame-el-fg: None;
+  --frame-el-shadow: None;
+  --active-el-shadow: None;
 }
 
-.PinnedTabsBar,
+.PinnedTabsBar {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin: 0 5px;
+  width: auto !important;
+}
 .Tab[data-pin="true"][data-active="true"] .body,
 .TabsPanel .bottom-space {
   background-color: transparent;
@@ -33,11 +52,8 @@
   height: 12px;
 }
 
-#root[data-theme="plain"][data-frame-color-scheme="dark"] {
-  --frame-el-bg: None;
-  --frame-el-fg: None;
-  --frame-el-shadow: None;
-  --active-el-shadow: None;
+.panel-box {
+  width: auto;
 }
 
 .PinnedTabsBar .Tab {
@@ -46,10 +62,16 @@
   margin: 8px;
 }
 
+.Tab[data-pin="true"][data-active="true"] {
+  border-bottom: 4px ridge rgba(99, 102, 241, 0.6);
+}
+
+/*
 .Tab[data-pin="true"][data-active="true"] img {
   background-color: rgba(0, 0, 0, 0.15);
   border-radius: 8px;
 }
+*/
 
 .PinnedTabsBar div.fav,
 .PinnedTabsBar img.fav-icon {
@@ -58,6 +80,3 @@
   padding: 6px;
 }
 
-.Tab {
-  margin: 0.2rem var(--tabs-margin);
-}

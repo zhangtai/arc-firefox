@@ -1,14 +1,31 @@
 @media (prefers-color-scheme: light) {
+  .browser-toolbar {
+    &:not(.titlebar-color) {
+      background-color: rgb(236, 236, 236) !important;
+    }
+  }
+  #nav-bar:not([tabs-hidden="true"]) {
+    background-color: rgb(236, 236, 236) !important;
+  }
   .browserSidebarContainer {
-    background: linear-gradient(#f3ca52, #f6e9b2);
+   background-color: rgb(236, 236, 236) !important;
   }
 }
 
 @media (prefers-color-scheme: dark) {
+  .browser-toolbar {
+    &:not(.titlebar-color) {
+      background-color: rgb(40, 40, 40) !important;
+    }
+  }
+  #nav-bar:not([tabs-hidden="true"]) {
+    background-color: rgb(40, 40, 40) !important;
+  }
   .browserSidebarContainer {
-    background: linear-gradient(#2c2907, #544e0d);
+    background-color: rgb(40, 40, 40);
   }
 }
+
 
 #sidebar-header {
   display: None;
@@ -18,13 +35,19 @@
   border: none !important;
 }
 
+#navigator-toolbox {
+  border-bottom: 0 !important;
+}
+
 #main-window #titlebar {
   overflow: hidden;
   transition: height 0.3s 0.3s !important;
 }
 
-#main-window[titlepreface*="[Sidebery] "] #titlebar,
-#main-window[titlepreface*="[Sidebery] "] #navigator-toolbox {
+/* , */
+/* #main-window[titlepreface*="[Sidebery] "] #navigator-toolbox */
+#main-window[titlepreface*="[Sidebery] "] #titlebar
+{
   height: 0 !important;
 }
 
