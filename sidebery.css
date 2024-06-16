@@ -13,15 +13,20 @@
   #root.root {
     background-color: rgb(249, 249, 251);
   }
-*/
+  */
   #root .NavigationBar {
     background-color: #ececec;
   }
 }
 
 @media (prefers-color-scheme: dark) {
+  /*
   #root.root {
     background: linear-gradient(rgb(60, 40, 200), rgb(25, 0, 118));
+  }
+  */
+  #root .NavigationBar {
+    background-color: #272727;
   }
 }
 
