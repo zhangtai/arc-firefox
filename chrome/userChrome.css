@@ -1,66 +1,67 @@
 @media (prefers-color-scheme: light) {
-  .browser-toolbar {
-    &:not(.titlebar-color) {
-      background-color: rgb(236, 236, 236) !important;
+    .browser-toolbar {
+        &:not(.titlebar-color) {
+            background-color: rgb(236, 236, 236) !important;
+        }
     }
-  }
-  #nav-bar:not([tabs-hidden="true"]) {
-    background-color: rgb(236, 236, 236) !important;
-  }
-  .browserSidebarContainer {
-   background-color: rgb(236, 236, 236) !important;
-  }
+    #nav-bar:not([tabs-hidden="true"]) {
+        background-color: rgb(236, 236, 236) !important;
+    }
+    .browserSidebarContainer {
+        background-color: rgb(236, 236, 236) !important;
+    }
 }
 
 @media (prefers-color-scheme: dark) {
-  .browser-toolbar {
-    &:not(.titlebar-color) {
-      background-color: rgb(40, 40, 40) !important;
+    .browser-toolbar {
+        &:not(.titlebar-color) {
+            background-color: rgb(40, 40, 40) !important;
+        }
     }
-  }
-  #nav-bar:not([tabs-hidden="true"]) {
-    background-color: rgb(40, 40, 40) !important;
-  }
-  .browserSidebarContainer {
-    background-color: rgb(40, 40, 40);
-  }
+    #nav-bar:not([tabs-hidden="true"]) {
+        background-color: rgb(40, 40, 40) !important;
+    }
+    .browserSidebarContainer {
+        background-color: rgb(40, 40, 40);
+    }
 }
 
+#main-window[titlepreface*="[Sidebery] "] #urlbar-container {
+    padding-top: 1.2rem !important;
+}
 
 #sidebar-header {
-  display: None;
+    display: None;
 }
 
 .sidebar-splitter {
-  border: none !important;
+    border: none !important;
 }
 
 #navigator-toolbox {
-  border-bottom: 0 !important;
+    border-bottom: 0 !important;
 }
 
 #main-window #titlebar {
-  overflow: hidden;
-  transition: height 0.3s 0.3s !important;
+    overflow: hidden;
+    transition: height 0.3s 0.3s !important;
 }
 
 /* , */
 /* #main-window[titlepreface*="[Sidebery] "] #navigator-toolbox */
-#main-window[titlepreface*="[Sidebery] "] #titlebar
-{
-  height: 0 !important;
+#main-window[titlepreface*="[Sidebery] "] #titlebar {
+    height: 0 !important;
 }
 
 #main-window[titlepreface*="[Sidebery] "] #tabbrowser-tabs {
-  z-index: 0 !important;
+    z-index: 0 !important;
 }
 
 #main-window[titlepreface*="[Sidebery] "] #appcontent browser {
-  border-radius: 8px;
-  box-shadow: 0px 0px 8px 2px rgb(0 0 0 / 20%);
+    border-radius: 8px;
+    box-shadow: 0px 0px 8px 2px rgb(0 0 0 / 20%);
 }
 
 #main-window[titlepreface*="[Sidebery] "] #appcontent .browserStack {
-  margin: 8px;
+    margin: 8px;
 }
-
